@@ -266,13 +266,6 @@ lib/python/Plugins/Extensions/SocketMMI/meta/Makefile
 lib/python/Plugins/Extensions/SocketMMI/src/Makefile
 lib/python/Plugins/Extensions/TuxboxPlugins/Makefile
 lib/python/Plugins/Extensions/TuxboxPlugins/meta/Makefile
-lib/python/Plugins/Extensions/BhWeather/Makefile
-lib/python/Plugins/Extensions/BhEpgBackup/Makefile
-lib/python/Plugins/Extensions/BhFastEpg/Makefile
-lib/python/Plugins/Extensions/BhFullBackup/Makefile
-lib/python/Plugins/Extensions/BhPersonalBackup/Makefile
-lib/python/Plugins/Extensions/BhPersonalBackup/icons/Makefile
-lib/python/Plugins/SystemPlugins/BlackHoleApi/Makefile
 lib/python/Plugins/SystemPlugins/CommonInterfaceAssignment/Makefile
 lib/python/Plugins/SystemPlugins/CommonInterfaceAssignment/meta/Makefile
 lib/python/Plugins/SystemPlugins/DefaultServicesScanner/Makefile
