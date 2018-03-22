@@ -796,17 +796,11 @@ class InfoBarChannelSelection:
 		self.switchChannelDown()
 
 	def historyBack(self):
-		if config.usage.historymode.getValue() == '0':
-                        self.servicelist.historyBack()
-                else:
-                        self.servicelist.historyZap(-1)
-
+		self.servicelist.historyBack()
+                
 	def historyNext(self):
-		if config.usage.historymode.getValue() == '0':
-                        self.servicelist.historyNext()
-                else:
-                        self.servicelist.historyZap(+1)
-
+		self.servicelist.historyNext()
+                
 	def keyUpCheck(self):
 		if config.usage.oldstyle_zap_controls.value:
 			self.zapDown()
