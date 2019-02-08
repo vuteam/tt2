@@ -2,7 +2,7 @@ from Screens.ChoiceBox import ChoiceBox
 from Screens.InputBox import InputBox
 from Screens.Screen import Screen
 from enigma import eTimer
-from boxbranding import getMachineBrand, getMachineName
+from enigma import getBoxType
 from Screens.MessageBox import MessageBox
 from Screens.Standby import TryQuitMainloop
 from Components.ActionMap import ActionMap
@@ -265,7 +265,7 @@ class BHDevicesConf(Screen, ConfigListScreen):
         Screen.setTitle(self, _('Choose where to mount your devices to:'))
         self['key_green'] = Label(_('Save'))
         self['key_red'] = Label(_('Cancel'))
-        self['Linconn'] = Label(_('Wait please while scanning your %s %s devices...') % (getMachineBrand(), getMachineName()))
+        self['Linconn'] = Label(_('Wait please while scanning your %s %s devices...') % (getBoxType())
         self['actions'] = ActionMap(['WizardActions', 'ColorActions'], {'green': self.saveMypoints,
          'red': self.close,
          'back': self.close})
@@ -374,9 +374,9 @@ class BHDevicesConf(Screen, ConfigListScreen):
         ybox.setTitle(_('Please wait.'))
 
     def delay(self, val):
-        message = _('Changes need a system restart to take effect.\nRestart your %s %s now?') % (getMachineBrand(), getMachineName())
+        message = _('Changes need a system restart to take effect.\nRestart your %s %s now?') % (getBoxType())
         ybox = self.session.openWithCallback(self.restartBox, MessageBox, message, MessageBox.TYPE_YESNO)
-        ybox.setTitle(_('Restart %s %s.') % (getMachineBrand(), getMachineName()))
+        ybox.setTitle(_('Restart %s %s.') % (getBoxType())
 
     def add_fstab(self, result = None, retval = None, extra_args = None):
         print '[MountManager] RESULT:', result
